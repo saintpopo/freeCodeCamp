@@ -43,6 +43,17 @@ You can flip a sequence by using the `[::-1]` slice notation:
 
     a = [1, 2, 3, 4, 5, 6]
     print(a[::-1])    # prints [6, 5, 4, 3, 2, 1]
+   
+#IMPLEMENTATION
+
+For example : The above idea can be used to check whether a given string is a palindrome 
+        
+        #take the string as input
+        s=input() 
+        if s == s[::-1]:
+            print("Palindrome.")
+        else:
+            print("Not a Palindrome.")
 
 <a href='https://docs.python.org/3/library/functions.html#slice' target='_blank' rel='nofollow'>Official Documentation</a>
 ![:rocket:](//forum.freecodecamp.com/images/emoji/emoji_one/rocket.png?v=2 ":rocket:") <a href='https://repl.it/CT5h' target='_blank' rel='nofollow'>Run Code</a>
