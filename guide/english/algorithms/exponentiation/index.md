@@ -40,6 +40,7 @@ int power(int x, unsigned int y) {
 
 Given three numbers x, y and p, compute (x^y) % p
 
+-Iterative version.
 ```C
 int power(int x, unsigned int y, int p) { 
     int res = 1;  
@@ -56,3 +57,17 @@ int power(int x, unsigned int y, int p) {
 } 
 ```
 Time Complexity: O(Log y).
+
+-Recursive version.
+```C++
+
+int power(int a,unsigned int b,int p){
+    if(!b){             //check if b==0 or not
+        return 1;
+    }
+    if(b&1){            //check if b is odd.
+        return (a%p * power((a*a)%p,(b-1)/2,p)%p)%p;
+    }
+    return power((a*a)%p,b/2,p)%p;
+}
+```
